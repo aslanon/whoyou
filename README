@@ -4,3 +4,5 @@ Descriptions: You're in control with whoyou! :)
 Mail: slnnronur@gmail.com
 Os: Linux 
 License: GPL GNU GENERAL PUBLIC LICENSE Version 3
+
+setup command: sudo python setup.py
