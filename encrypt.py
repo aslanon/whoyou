@@ -1,3 +1,9 @@
+# -*- coding: utf-8 -*-
+#!/usr/bin/python
+
+#Sifreleme kodları kaynak: http://pythontr.blogspot.com/2008/09/ev-yapm-ifreleme.html
+#Teşekkürler PythonTr ve Aydın Şen
+
 import operator
 import sys,os
 
