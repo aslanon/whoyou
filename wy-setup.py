@@ -37,4 +37,13 @@ print pwd
 file = open("%s/key.txt" % fileDirectory, "w")
 file.write(pwd)
 file.close()
+
+user = os.listdir("/home/")
+if user[0] != "samba":
+  os.system("chown -R %s:users %s" % (user[0], fileDirectory))
+  print "User:%s" % user[0]
+else:
+  os.system("chown -R %s:users %s" % (user[1], fileDirectory))
+  print "User:%s" % user[1]
+
 print "Completed."
