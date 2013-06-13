@@ -38,11 +38,9 @@ VALUEURL = "http://whoyou.googlecode.com/svn/value" # if value == 0: pc shutdown
 encryp = Encrypt()
 key = open("%s/key.txt" % fileDirectory).read()
 openPass = encryp.xor(key, False)
+
 MAIL_PASSWORD = encryp.decrypt(openPass)
-
-
-
-MAIL = "slnnronur@gmail.com"
+MAIL = open("%s/wy-mail.txt" % fileDirectory).read()
 SUBJECT = "-*-whoyou-*-"
 
 
