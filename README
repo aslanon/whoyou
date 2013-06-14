@@ -1,9 +1,11 @@
 Author: Onur ASLAN
 Name: whoyou
-Summary: You're in control with whoyou! :)
-Descriptions: WhoYou, bilgisayarınızın izinsiz açılması durumunda sisteminiz tarafından otomatik olarak başlatılmaya ayarlanarak kurulum dosyasında verdiğiniz bilgiler doğrultusunda vermiş olduğunuz dakika aralığında kameradan ve masaüstünüzden görüntü alarak size e-posta atar. Sizde belirttiğiniz internet adresine 0 (kapat) veya 1 (açık kalsın) komutunu girerek bilgisayarınızı hemen kapatabilir veya açık kalmasına müsade edebilirsiniz. Bilgisayarınız kapatılana kadar veya belirtilen fotoğraf sayısına ulaşıldığında whoyou devreden çıkar. Daha fazla bilgi ve fotoğrafa ulaşmak için belirttiğiniz saklama dizininden ulaşabilirsiniz.
 Mail: slnnronur@gmail.com
 Os: Linux 
 License: GPL GNU GENERAL PUBLIC LICENSE Version 3
+
+Summary: You're in control with whoyou! :)
+Descriptions: WhoYou, bilgisayarınızın izinsiz açılması durumunda sisteminiz tarafından otomatik olarak başlatılmaya ayarlanarak kurulum dosyasında verdiğiniz bilgiler doğrultusunda vermiş olduğunuz dakika aralığında kameradan ve masaüstünüzden görüntü alarak size e-posta atar. Sizde belirttiğiniz internet adresine 0 (kapat) veya 1 (açık kalsın) komutunu girerek bilgisayarınızı hemen kapatabilir veya açık kalmasına müsade edebilirsiniz. Bilgisayarınız kapatılana kadar veya belirtilen fotoğraf sayısına ulaşıldığında whoyou devreden çıkar. Daha fazla bilgi ve fotoğrafa ulaşmak için belirttiğiniz saklama dizininden ulaşabilirsiniz.
+
 
 setup command: sudo python wy-setup.py
