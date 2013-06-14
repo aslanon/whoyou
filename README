@@ -5,4 +5,4 @@ Mail: slnnronur@gmail.com
 Os: Linux 
 License: GPL GNU GENERAL PUBLIC LICENSE Version 3
 
-setup command: sudo python setup.py
+setup command: sudo python wy-setup.py
