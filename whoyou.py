@@ -8,7 +8,7 @@
 import os, sys
 import glob
 import operator
-import urllib
+import urllib, re
 import Image
 import select
 import time
@@ -36,11 +36,10 @@ VALUEURL = "http://whoyou.googlecode.com/svn/value" # if value == 0: pc shutdown
 
 
 encryp = Encrypt()
-key = open("%s/key.txt" % fileDirectory).read()
+key = open("%s/wykey" % fileDirectory).read()
 openPass = encryp.xor(key, False)
-
 MAIL_PASSWORD = encryp.decrypt(openPass)
-MAIL = open("%s/wy-mail.txt" % fileDirectory).read()
+MAIL = open("%s/usernames" % fileDirectory).readlines()[0]
 SUBJECT = "-*-whoyou-*-"
 
 
@@ -83,15 +82,8 @@ def interval(minute, amount):
   sys.exit()
     
 def __readValue():
-    urlValue = urllib.urlopen(VALUEURL).read()
-    valueFile = open("%s/value.txt" % fileDirectory, "wb")
-    valueFile.write(urlValue)
-    valueFile.close()
-    value = file("%s/value.txt" % fileDirectory).read()
-    if value == "0":
-        print "Value = 0: PC closing...\n"
-    else:
-        print "Value = 1: PC free...\n"
+  import wyTwitter
+  print wyTwitter.twitter_status
 
 def __reportSend(mail, subject, text, attach):
    msg = MIMEMultipart()
@@ -145,5 +137,5 @@ def __takeScreenshot(ssName, dateTime):
     print "%s | Taked screenshot: %s/%s.png" % (dateTime, fileDirectory, ssName)
   else:
     print "Failed: its not take screenshot"
-    
+
 interval(MINUTE, AMOUNT) 

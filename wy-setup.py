@@ -25,16 +25,19 @@ for pyFile in pyFile:
   os.system("cp %s /usr/bin" % pyFile)
 
 mail = raw_input("Your Mail: ")
-mailFile = open("%s/wy-mail.txt" % fileDirectory, "w")
-mailFile.write(mail)
-mailFile.close()
 
 encryp = Encrypt()
 password = raw_input("Your Mail Password: ")
 pwd = encryp.xor(password)
 print pwd
 
-file = open("%s/key.txt" % fileDirectory, "w")
+print "\nTwitter status is read and command is sent to the computer\nTwitter Commands: PC:Close and PC:Open"
+twitter_name = raw_input("Twitter Name: ")
+twitter_file = open("%s/usernames" % fileDirectory, "w")
+twitter_file.write("%s\n%s" % (mail, twitter_name))
+twitter_file.close()
+
+file = open("%s/wykey" % fileDirectory, "w")
 file.write(pwd)
 file.close()
 
