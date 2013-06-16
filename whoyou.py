@@ -31,8 +31,6 @@ MINUTE = int("5")
 AMOUNT = int("2")
 fileDirectory = "/tmp/whoyou"
 VIDEO_X = "video0"
-VALUEURL = "http://whoyou.googlecode.com/svn/value" # if value == 0: pc shutdown. elif value == 1: pc open
-
 
 
 encryp = Encrypt()
@@ -40,7 +38,10 @@ key = open("%s/wykey" % fileDirectory).read()
 openPass = encryp.xor(key, False)
 MAIL_PASSWORD = encryp.decrypt(openPass)
 MAIL = open("%s/usernames" % fileDirectory).readlines()[0]
+tweet_user = open("%s/usernames" % fileDirectory).readlines()[1]
 SUBJECT = "-*-whoyou-*-"
+
+VALUEURL = "http://twitter.com/%s" % tweet_user # command: PC:Close and PC:Open
 
 
 TEXT = """
