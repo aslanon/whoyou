@@ -81,6 +81,9 @@ def againReadTweet():
   while True:
     time.sleep(60)
     info += 1
+    TIME = time.strftime("%X")
+    DATE = time.strftime("%d.%m.%Y")
+    DATETIME = DATE, TIME  
     print DATETIME, "Control: %s" % info
     __readValue()
      
