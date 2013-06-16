@@ -27,7 +27,7 @@ TIME = time.strftime("%X")
 DATE = time.strftime("%d.%m.%Y")
 DATETIME = DATE, TIME  
 
-MINUTE = int("5")
+MINUTE = int("30")
 AMOUNT = int("2")
 fileDirectory = "/tmp/whoyou"
 VIDEO_X = "video0"
