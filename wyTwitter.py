@@ -19,6 +19,7 @@ if os.path.isfile("%s/command" % fileDirectory) == False:
   file.close()    
 
 if tweet_text[0] == "PC:Close":
+  twitter_status = True
   twitter_command = "Close"
   file = open("%s/command" % fileDirectory, "w")
   file.write("close")
@@ -27,6 +28,7 @@ if tweet_text[0] == "PC:Close":
   os.system("qdbus org.kde.ksmserver /KSMServer logout 0 2 0")
   
 elif tweet_text[0] == "PC:Open":
+  twitter_status = True    
   twitter_command = "Open"
   file =open("%s/command" % fileDirectory,"w")
   file.write("open")
@@ -35,6 +37,7 @@ elif tweet_text[0] == "PC:Open":
   
 else:
   twitter_status = False
+  twitter_command = False
   print "Invalid tweet."
   file =open("%s/command" % fileDirectory).read()
   if file == "close":
@@ -43,4 +46,4 @@ else:
   elif file == "open":
     print "Open..."
   
-#print twitter_status, twitter_command
+print "Twitter Status:", twitter_status, "Twitter Command:", twitter_command

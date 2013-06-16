@@ -56,16 +56,10 @@ else:
   os.mkdir(fileDirectory)
 
 FILES = glob.glob1(fileDirectory, "*.*g")
- 
- 
+
+
 def interval(minute, amount):
-  print """\n
-#################################################################
-## whoyou a Aslanon product. ##  http://aslanonur.blogspot.com ##
-#################################################################
-             ## < slnnronur@gmail.com > ##
-             #############################
-"""
+  about()    
   global TIME, DATE, DATETIME
   value = 0
   for no in range(0, amount):
@@ -80,8 +74,17 @@ def interval(minute, amount):
     
   __reportSend(MAIL, SUBJECT, TEXT, FILES)    
   print "Closed..."
-  sys.exit()
-    
+  againReadTweet()
+
+def againReadTweet():
+  print "Tweet checked once per minute."
+  info = 0
+  while True:
+    time.sleep(60)
+    info += 1
+    print DATETIME, "Control: %s" % info
+    __readValue()
+     
 def __readValue():
   import wyTwitter
   print wyTwitter.twitter_status
@@ -139,4 +142,14 @@ def __takeScreenshot(ssName, dateTime):
   else:
     print "Failed: its not take screenshot"
 
+def about():
+  print """\n
+#################################################################
+## whoyou a Aslanon product. ##  http://aslanonur.blogspot.com ##
+#################################################################
+             ## < slnnronur@gmail.com > ##
+             #############################
+"""
+ 
+__readValue()
 interval(MINUTE, AMOUNT) 
