@@ -60,7 +60,6 @@ FILES = glob.glob1(fileDirectory, "*.*g")
 
 def interval(minute, amount):
   about()    
-  global TIME, DATE, DATETIME
   value = 0
   for no in range(0, amount):
     time.sleep(minute)
